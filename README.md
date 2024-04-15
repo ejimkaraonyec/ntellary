@@ -4,7 +4,7 @@ Testing out T3 with Theo's 0 to production walkthrough
 
 ## TODO
 
-- [] Make it deploy (vercel)
+- [x] Make it deploy (vercel)
 - [] Scaffold basic ui with mock data
 - [] Tidy up build process
 - [] Actually set up a database (vercel postgres)
