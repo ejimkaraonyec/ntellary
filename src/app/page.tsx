@@ -1,20 +1,23 @@
 import Image from "next/image";
 import { db } from "~/server/db";
 
+export const dynamic = "force-dynamic";
+
+const mockUrls = [
+  "https://utfs.io/f/40278dd5-236f-4a09-8d2a-89efc8857458-8x3hkn.jpg",
+  "https://utfs.io/f/121687ed-ef86-4540-b362-b80c632cd949-17x8q8.png",
+];
+
+const mockImages = mockUrls.map((url, index) => ({
+  id: index + 1,
+  url,
+}));
+
 export default async function HomePage() {
   const posts = await db.query.posts.findMany();
 
   console.log({ posts });
 
-  const mockUrls = [
-    "https://utfs.io/f/40278dd5-236f-4a09-8d2a-89efc8857458-8x3hkn.jpg",
-    "https://utfs.io/f/121687ed-ef86-4540-b362-b80c632cd949-17x8q8.png",
-  ];
-
-  const mockImages = mockUrls.map((url, index) => ({
-    id: index + 1,
-    url,
-  }));
   return (
     <main className="container mx-auto min-h-screen">
       <div className="flex flex-wrap gap-3">
