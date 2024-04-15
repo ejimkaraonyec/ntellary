@@ -20,9 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`min-h-screen bg-gradient-to-b from-[#2e026d] to-[#15162c] font-sans text-sky-100 antialiased ${inter.variable}`}
-      >
+      <body className={`min-h-screen antialiased ${inter.variable}`}>
         {children}
       </body>
     </html>
