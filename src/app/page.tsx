@@ -14,9 +14,9 @@ const mockImages = mockUrls.map((url, index) => ({
 }));
 
 export default async function HomePage() {
-  const posts = await db.query.posts.findMany();
+  const images = await db.query.images.findMany();
 
-  console.log({ posts });
+  console.log({ images });
 
   return (
     <main className="container mx-auto min-h-screen">
